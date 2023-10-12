@@ -12,11 +12,6 @@ function GuessInput({ previousGuesses, setPreviousGuesses, answer}) {
     console.info({ guess });
     
     setIsWinner(answer == guess);
-
-    if(previousGuesses.length >= NUM_OF_GUESSES_ALLOWED){
-      window.alert('¡Lástima Margarito!');
-      return;
-    }
     
     setPreviousGuesses([...previousGuesses, checkGuess(guess, answer)]);
     setGuess('');
